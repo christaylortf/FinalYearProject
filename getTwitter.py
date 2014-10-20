@@ -21,3 +21,6 @@ with open(fileTime, 'rb') as afile:
 	buf = afile.read()
 	hasher.update(buf)
 print(hasher.hexdigest())
+
+with open('hashValues','a') as f:
+	f.write(fileTime + " - " + hasher.hexdigest() + "\n")
