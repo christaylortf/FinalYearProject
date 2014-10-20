@@ -8,5 +8,5 @@ response = urllib2.urlopen(userResponse)
 html = response.read()
 
 soup = BeautifulSoup(html)
-
-print(soup.prettify())
+with open('TwitterPage', 'a') as f:
+	f.write(html)
