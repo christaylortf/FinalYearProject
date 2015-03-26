@@ -10,8 +10,12 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-user = api.get_user('ChrisTaylor_TSA')
-print user.screen_name
-print user.followers_count
-for friend in user.friends():
-   print friend.screen_name
+   
+statusid = '580728164189675520'
+
+pub = api.home_timeline()
+for i in pub:
+        print status.text
+        
+print status.text
+print status.user.screen_name
