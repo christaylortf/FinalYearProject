@@ -46,7 +46,7 @@ def menuAction(menuChoice):
 	elif menuChoice == 7.1:
 		showUserCoordinates(tweetID)
 		showMenu()
-	elif menuChoice = 7.2:
+	elif menuChoice == 7.2:
 		showUserMap(tweetID)
 		showMenu()
 	elif menuChoice == 7.3:
