@@ -79,8 +79,17 @@ def showUserMap(tweetID):
 	toOpen = "https://www.google.co.uk/maps/search/"+coords1+","+coords2
 	webbrowser.open(toOpen)
 	
-def testingMethod(tweetID):
+def getHashtags(tweetID):
 	tweet = api.get_status(tweetID)
-	for key,value in tweet.geo.items():
-		if key == 'coordinates':
-			print value
+	print tweet.entities.get('hashtags')
+
+def testingMethod(tweetID):
+	import time
+	tweet = api.get_status(tweetID)
+	ids = [tweet.user.screen_name]
+	for page in tweepy.Cursor(api.followers_ids, screen_name="@"+tweet.user.screen_name+"").pages():
+		ids.extend(page)
+		time.sleep(60)
+		
+	screen_names = [user.screen_name for user in api.lookup_users(user_ids=ids)]
+	print screen_names

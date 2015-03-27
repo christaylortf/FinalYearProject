@@ -14,6 +14,7 @@ def showMenu():
 		print '	7.1 Show location coordinates'
 		print '	7.2 Show user location on map'
 		print '	7.3  Show user timezone'
+		print '8. Get hashtags in tweet'
 		print '999 for test method'
 	print '0 to quit'
 	menuChoice = input("\nPlease choose an option: ")
@@ -51,6 +52,9 @@ def menuAction(menuChoice):
 		showMenu()
 	elif menuChoice == 7.3:
 		showUserTimezone(tweetID)
+		showMenu()
+	elif menuChoice == 8:
+		getHashtags(tweetID)
 		showMenu()
 	elif menuChoice == 0:
 		print 'Goodbye!'
