@@ -16,3 +16,9 @@ api = tweepy.API(auth)
 def showTweetText(tweetID):
 	status = api.get_status(tweetID)
 	print status.text
+	
+def showTweetAuthor(tweetID):
+	urllib3.disable_warnings()
+	tweet = api.get_status(tweetID)
+	user = tweet.user.screen_name
+	print "The author of that tweet is: @"+user
