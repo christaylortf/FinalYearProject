@@ -51,6 +51,10 @@ def showLocation(tweetID):
 	else:
 		print 'This tweet does not have a location assigned to it'
 		
+def showUserTimezone(tweetID):
+	tweet = api.get_status(tweetID)
+	print "Time-zone:", tweet.user.time_zone
+	
 def testingMethod(tweetID):
 	tweet = api.get_status(tweetID)
 	print tweet.user.location.encode('utf8')
