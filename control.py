@@ -12,6 +12,7 @@ def showMenu():
 	menuAction(menuChoice)
 	
 def menuAction(menuChoice):
+	global tweetID
 	if menuChoice == 1:
 		tweetID = raw_input("Enter the ID of the new Tweet to investigate")
 		print "Your working TweetID is: "+tweetID
@@ -30,6 +31,7 @@ def menuAction(menuChoice):
 
 
 print "Welcome to the Twitter Forensic Storage Tool"
+global tweetID 
 tweetID = raw_input("Enter the ID of the Tweet to investigate: ")
 showMenu()
 
