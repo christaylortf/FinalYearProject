@@ -57,13 +57,28 @@ def showUserTimezone(tweetID):
 	
 def getUserCoordinates(tweetID):
 	tweet = api.get_status(tweetID)
-		for key,value in tweet.geo.items():
-			if key == 'coordinates':
-				return value
+	for key,value in tweet.geo.items():
+		if key == 'coordinates':
+			return value
 				
 def showUserCoordinates(tweetID):
 	print getUserCoordinates(tweetID)
 
+def showUserMap(tweetID):
+	coords = getUserCoordinates(tweetID)
+	print coords
+	coords1 = str(coords[:-1])
+	coords1 = coords1[1:-1]
+
+	coords2 = str(coords[1:])
+	coords2 = coords2[1:-1]
+	print coords1
+	print coords2
+	
+	import webbrowser
+	toOpen = "https://www.google.co.uk/maps/search/"+coords1+","+coords2
+	webbrowser.open(toOpen)
+	
 def testingMethod(tweetID):
 	tweet = api.get_status(tweetID)
 	for key,value in tweet.geo.items():
