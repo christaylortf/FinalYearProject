@@ -23,7 +23,7 @@ def showTweetAuthor(tweetID):
 	user = tweet.user.screen_name
 	print "The author of that tweet is: @"+user
 	
-def showTimeCreated(tweetID)
+def showTimeCreated(tweetID):
 	tweet = api.get_status(tweetID)
 	timeCreated = tweet.created_at
 	print 'This tweet was created at: '+ timeCreated
