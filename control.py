@@ -30,7 +30,7 @@ def menuAction(menuChoice):
 
 
 print "Welcome to the Twitter Forensic Storage Tool"
-tweetID = raw_input("Enter the ID of the Tweet to investigate")
+tweetID = raw_input("Enter the ID of the Tweet to investigate: ")
 showMenu()
 
 
