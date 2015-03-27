@@ -28,3 +28,7 @@ def showTimeCreated(tweetID):
 	timeCreated = tweet.created_at
 	print 'Tweet was created at:'
 	print timeCreated
+
+def testingMethod(tweetID)
+	tweet = api.get_status(tweetID)
+	

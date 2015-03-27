@@ -9,6 +9,7 @@ def showMenu():
 		print '3. View Tweet Author'
 		print '4. View time created'
 		print '0 to quit'
+		print '999 for test method'
 	menuChoice = input("\nPlease choose an option: ")
 	menuAction(menuChoice)
 	
@@ -29,6 +30,9 @@ def menuAction(menuChoice):
 		showMenu()
 	elif menuChoice == 0:
 		sys.exit()
+	elif menuChoice == 999:
+		testingMethod(tweetID)
+		showMenu()
 	else:
 		print 'Oh oh! That menu item isn\t available. Please try again.'
 		showMenu()
