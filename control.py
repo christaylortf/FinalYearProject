@@ -9,6 +9,7 @@ def showMenu():
 		print '3. View Tweet Author'
 		print '4. View time created'
 		print '5. Has this tweet been retweeted?'
+		print '6. Has this tweet been favorited?'
 		print '0 to quit'
 		print '999 for test method'
 	menuChoice = input("\nPlease choose an option: ")
@@ -32,7 +33,11 @@ def menuAction(menuChoice):
 	elif menuChoice == 5:
 		beenRetweeted(tweetID)
 		showMenu()
+	elif menuChoice == 6:
+		beenFavd(tweetID)
+		showMenu()
 	elif menuChoice == 0:
+		print 'Goodbye!'
 		sys.exit()
 	elif menuChoice == 999:
 		testingMethod(tweetID)

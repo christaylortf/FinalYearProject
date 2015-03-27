@@ -35,6 +35,13 @@ def beenRetweeted(tweetID):
 		print 'This tweet has been retweeted at least once'
 	else:
 		print 'This tweet has not been retweeted'
+		
+def beenFavd(tweetID):
+	tweet = api.get_status(tweetID)
+	if tweet.favorited:
+		print 'This tweet has been favourited at least once'
+	else:
+		print 'This tweet has not been favourited'
 
 def testingMethod(tweetID):
 	tweet = api.get_status(tweetID)
