@@ -7,6 +7,7 @@ def showMenu():
 	if tweetID!="":
 		print '2. View Tweet Text'
 		print '3. View Tweet Author'
+		print '4. View time created'
 		print '0 to quit'
 	menuChoice = input("\nPlease choose an option: ")
 	menuAction(menuChoice)
@@ -22,6 +23,9 @@ def menuAction(menuChoice):
 		showMenu()
 	elif menuChoice == 3:
 		showTweetAuthor(tweetID)
+		showMenu()
+	elif menuChoice == 4:
+		showTimeCreated(tweetID)
 		showMenu()
 	elif menuChoice == 0:
 		sys.exit()
