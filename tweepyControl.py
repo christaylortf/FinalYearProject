@@ -26,4 +26,5 @@ def showTweetAuthor(tweetID):
 def showTimeCreated(tweetID):
 	tweet = api.get_status(tweetID)
 	timeCreated = tweet.created_at
-	print 'This tweet was created at: '+ timeCreated
+	print 'Tweet was created at:'
+	print timeCreated
