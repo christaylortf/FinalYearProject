@@ -55,12 +55,15 @@ def showUserTimezone(tweetID):
 	tweet = api.get_status(tweetID)
 	print "Time-zone:", tweet.user.time_zone
 	
-def showUserCoordinates(tweetID):
+def getUserCoordinates(tweetID):
 	tweet = api.get_status(tweetID)
-	for key,value in tweet.geo.items():
-		if key == 'coordinates':
-			print value
-	
+		for key,value in tweet.geo.items():
+			if key == 'coordinates':
+				return value
+				
+def showUserCoordinates(tweetID):
+	print getUserCoordinates(tweetID)
+
 def testingMethod(tweetID):
 	tweet = api.get_status(tweetID)
 	for key,value in tweet.geo.items():
