@@ -29,6 +29,13 @@ def showTimeCreated(tweetID):
 	print 'Tweet was created at:'
 	print timeCreated
 
-def testingMethod(tweetID)
+def beenRetweeted(tweetID):
 	tweet = api.get_status(tweetID)
-	
+	if tweet.retweet:
+		print 'This tweet has been retweeted at least once'
+	else:
+		print 'This tweet has not been retweeted'
+
+def testingMethod(tweetID):
+	tweet = api.get_status(tweetID)
+	print tweet.retweeted
