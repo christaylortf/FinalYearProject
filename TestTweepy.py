@@ -13,9 +13,7 @@ api = tweepy.API(auth)
    
 statusid = '580728164189675520'
 
-pub = api.home_timeline()
-for i in pub:
-        print status.text
-        
+status = api.get_status(statusid)
+
+status = api.get_status(statusid)
 print status.text
-print status.user.screen_name
