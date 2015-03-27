@@ -43,6 +43,14 @@ def beenFavd(tweetID):
 	else:
 		print 'This tweet has not been favourited'
 
+def showLocation(tweetID):
+	tweet = api.get_status(tweetID)
+	location = tweet.user.location.encode('utf8')
+	if location != "":
+		print location
+	else:
+		print 'This tweet does not have a location assigned to it'
+		
 def testingMethod(tweetID):
 	tweet = api.get_status(tweetID)
-	print tweet.retweeted
+	print tweet.user.location.encode('utf8')
