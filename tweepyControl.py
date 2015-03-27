@@ -18,7 +18,7 @@ def showTweetText(tweetID):
 	print status.text
 	
 def showTweetAuthor(tweetID):
-	urllib3.disable_warnings()
+	
 	tweet = api.get_status(tweetID)
 	user = tweet.user.screen_name
 	print "The author of that tweet is: @"+user
@@ -57,4 +57,4 @@ def showUserTimezone(tweetID):
 	
 def testingMethod(tweetID):
 	tweet = api.get_status(tweetID)
-	print tweet.user.location.encode('utf8')
+	print tweet.geo
